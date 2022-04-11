@@ -1,0 +1,18 @@
+{
+  "rules": {
+      "@typescript-eslint/no-explicit-any": "off", // TODO: maybe warn
+      "@typescript-eslint/no-non-null-assertion": "off", // TODO: maybe warn
+      "@typescript-eslint/consistent-type-assertions": "off", // TODO: maybe warn
+
+      // "unicorn/filename-case": "off",
+      "unicorn/prefer-module": "off", // might be able to enable again on Node 17+
+
+      // "camelcase": 2,
+      // "no-unused-expressions": [2, {
+      //   "allowTernary": true,
+      //   "allowShortCircuit": true
+      // }],
+      // "@typescript-eslint/explicit-module-boundary-types": 0,
+      // "@typescript-eslint/triple-slash-reference": 0,
+  }
+}

@@ -9,14 +9,12 @@
         "unicorn"
     ],
     "extends": [
-        // --- Plugin Recommendations
         "plugin:@typescript-eslint/recommended",
         "plugin:@typescript-eslint/recommended-requiring-type-checking",
         "plugin:eslint-comments/recommended",
         "plugin:import/typescript",
         "plugin:promise/recommended",
         "plugin:unicorn/recommended",
-        // --- Standard
         "standard-with-typescript"
     ],
     "parserOptions": {
@@ -26,15 +24,14 @@
     },
     "rules": {
         "semi": "off",
+        "indent": "off",
+        "comma-dangle": "off",
         "multiline-ternary": "off",
         "max-len": ["error", {
             "code": 130,
             "ignoreTemplateLiterals": true,
             "ignorePattern": "(^ +<(svg|path|line)|lazy\\(async)"
         }],
-        "indent": "off",
-
-        "comma-dangle": "off",
         "arrow-parens": ["error", "always"],
         "no-void": ["error", { "allowAsStatement": true }],
         "sort-imports": [2, {
@@ -45,11 +42,11 @@
         }],
 
         "@typescript-eslint/ban-types": "off",
-        "@typescript-eslint/no-explicit-any": "off", // TODO: maybe warn
+        "@typescript-eslint/no-explicit-any": "off",
         "@typescript-eslint/promise-function-async": "off",
         "@typescript-eslint/comma-dangle": ["error", "always-multiline"],
-        "@typescript-eslint/no-non-null-assertion": "off", // TODO: maybe warn
-        "@typescript-eslint/consistent-type-assertions": "off", // TODO: maybe warn
+        "@typescript-eslint/no-non-null-assertion": "off",
+        "@typescript-eslint/consistent-type-assertions": "off",
         "@typescript-eslint/indent": ["error", 4, { "SwitchCase": 1 }],
         "@typescript-eslint/semi": ["error", "always"],
         "@typescript-eslint/strict-boolean-expressions": "off",
@@ -64,10 +61,6 @@
             }
         }],
 
-        "promise/no-nesting": "off",
-        "promise/always-return": "off",
-
-        // https://basarat.gitbooks.io/typescript/docs/tips/defaultIsBad.html
         "import/no-cycle": "error",
         "import/prefer-default-export": "off",
         "import/no-default-export": "error",
@@ -81,20 +74,14 @@
         }],
 
         "unicorn/no-null": "off",
-        "unicorn/prefer-module": "off", // might be able to enable again on Node 17+
-        // "unicorn/filename-case": "off",
+        "unicorn/prefer-module": "off",
         "unicorn/no-array-reduce": "off",
         "unicorn/no-nested-ternary": "off",
         "unicorn/prevent-abbreviations": "off",
 
-        "eslint-comments/disable-enable-pair": "off"
+        "promise/no-nesting": "off",
+        "promise/always-return": "off",
 
-        // "camelcase": 2,
-        // "no-unused-expressions": [2, {
-        //   "allowTernary": true,
-        //   "allowShortCircuit": true
-        // }],
-        // "@typescript-eslint/explicit-module-boundary-types": 0,
-        // "@typescript-eslint/triple-slash-reference": 0,
+        "eslint-comments/disable-enable-pair": "off"
     }
 }

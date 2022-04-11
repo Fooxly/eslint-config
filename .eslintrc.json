@@ -81,6 +81,7 @@
         }],
 
         "unicorn/no-null": "off",
+        "unicorn/prefer-module": "off", // might be able to enable again on Node 17+
         // "unicorn/filename-case": "off",
         "unicorn/no-array-reduce": "off",
         "unicorn/no-nested-ternary": "off",

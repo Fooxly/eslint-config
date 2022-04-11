@@ -1,0 +1,99 @@
+{
+    "root": true,
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+        "@typescript-eslint",
+        "eslint-comments",
+        "promise",
+        "import",
+        "unicorn"
+    ],
+    "extends": [
+        // --- Plugin Recommendations
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/recommended-requiring-type-checking",
+        "plugin:eslint-comments/recommended",
+        "plugin:import/typescript",
+        "plugin:promise/recommended",
+        "plugin:unicorn/recommended",
+        // --- Standard
+        "standard-with-typescript"
+    ],
+    "parserOptions": {
+        "ecmaVersion": 2021,
+        "sourceType": "module",
+        "project": "./tsconfig.json"
+    },
+    "rules": {
+        "semi": "off",
+        "multiline-ternary": "off",
+        "max-len": ["error", {
+            "code": 130,
+            "ignoreTemplateLiterals": true,
+            "ignorePattern": "(^ +<(svg|path|line)|lazy\\(async)"
+        }],
+        "indent": "off",
+
+        "comma-dangle": "off",
+        "arrow-parens": ["error", "always"],
+        "no-void": ["error", { "allowAsStatement": true }],
+        "sort-imports": [2, {
+          "ignoreCase": true,
+          "ignoreMemberSort": true,
+          "ignoreDeclarationSort": true,
+          "memberSyntaxSortOrder": ["none", "all", "single", "multiple"]
+        }],
+
+        "@typescript-eslint/ban-types": "off",
+        "@typescript-eslint/no-explicit-any": "off", // TODO: maybe warn
+        "@typescript-eslint/promise-function-async": "off",
+        "@typescript-eslint/comma-dangle": ["error", "always-multiline"],
+        "@typescript-eslint/no-non-null-assertion": "off", // TODO: maybe warn
+        "@typescript-eslint/consistent-type-assertions": "off", // TODO: maybe warn
+        "@typescript-eslint/indent": ["error", 4, { "SwitchCase": 1 }],
+        "@typescript-eslint/semi": ["error", "always"],
+        "@typescript-eslint/strict-boolean-expressions": "off",
+        "@typescript-eslint/member-delimiter-style": ["error", {
+            "multiline": {
+                "delimiter": "semi",
+                "requireLast": true
+            },
+            "singleline": {
+                "delimiter": "semi",
+                "requireLast": false
+            }
+        }],
+
+        "promise/no-nesting": "off",
+        "promise/always-return": "off",
+
+        // https://basarat.gitbooks.io/typescript/docs/tips/defaultIsBad.html
+        "import/no-cycle": "error",
+        "import/prefer-default-export": "off",
+        "import/no-default-export": "error",
+        "import/order": [2, {
+          "groups": [["builtin", "external"], ["index", "sibling", "parent"], "internal", "unknown"],
+          "newlines-between": "always",
+          "pathGroupsExcludedImportTypes": [],
+          "pathGroups": [
+            { "group": "internal", "pattern": "@/**" }
+          ]
+        }],
+
+        "unicorn/no-null": "off",
+        // "unicorn/filename-case": "off",
+        "unicorn/no-array-reduce": "off",
+        "unicorn/no-nested-ternary": "off",
+        "unicorn/prevent-abbreviations": "off",
+
+        "eslint-comments/disable-enable-pair": "off"
+
+        // "camelcase": 2,
+        // "no-unused-expressions": [2, {
+        //   "allowTernary": true,
+        //   "allowShortCircuit": true
+        // }],
+        // "@typescript-eslint/explicit-module-boundary-types": 0,
+        // "@typescript-eslint/triple-slash-reference": 0,
+    }
+}

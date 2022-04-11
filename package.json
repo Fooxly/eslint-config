@@ -1,0 +1,14 @@
+{
+  "name": "@fooxly/eslint-config",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.js",
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">=16"
+  },
+  "dependencies": {
+    "eslint": "^7.0.0",
+    "eslint-plugin-import": "^2.20.2"
+  }
+}

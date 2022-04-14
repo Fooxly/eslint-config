@@ -84,7 +84,7 @@
         "unicorn/no-array-reduce": "off",
         "unicorn/no-nested-ternary": "off",
         "unicorn/prevent-abbreviations": "off",
-        "unicorn/no-useless-undefined:": ["error", { "checkArguments": false }],
+        "unicorn/no-useless-undefined": ["error", { "checkArguments": false }],
 
         "promise/no-nesting": "off",
         "promise/always-return": "off",

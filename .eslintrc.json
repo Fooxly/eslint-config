@@ -91,6 +91,8 @@
         "promise/catch-or-return": [
             "error",
             { "allowThen": false, "allowFinally": true, "terminationMethod": ["catch", "finally"] }
-        ]
+        ],
+
+        "eslint-comments/disable-enable-pair": ["error", { "allowWholeFile": true }]
     }
 }

@@ -29,6 +29,7 @@
         "multiline-ternary": "off",
         "max-len": ["error", {
             "code": 130,
+            "ignoreRegExpLiterals": true,
             "ignoreTemplateLiterals": true,
             "ignorePattern": "(^ +<(svg|path|line)|lazy\\(async)"
         }],

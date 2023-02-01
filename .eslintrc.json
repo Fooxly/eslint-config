@@ -34,7 +34,7 @@
             "ignorePattern": "(^ +<(svg|path|line)|lazy\\(async)"
         }],
         "arrow-parens": ["error", "always"],
-        "no-void": ["error", { "allowAsStatement": true }],
+        "no-void": "off",
         "sort-imports": [2, {
           "ignoreCase": true,
           "ignoreMemberSort": true,
@@ -63,6 +63,11 @@
         "@typescript-eslint/semi": ["error", "always"],
         "@typescript-eslint/strict-boolean-expressions": "off",
         "@typescript-eslint/explicit-function-return-type": "off",
+        "@typescript-eslint/prefer-reduce-type-parameter": "off",
+        "@typescript-eslint/no-confusing-void-expression": ["error", {
+            "ignoreArrowShorthand": true,
+            "ignoreVoidOperator": true
+        }],
         "@typescript-eslint/no-misused-promises": ["error", {
             "checksVoidReturn": {
                 "attributes": false

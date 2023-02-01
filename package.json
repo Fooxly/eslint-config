@@ -11,19 +11,19 @@
     "test": "eslint --ext ts,tsx test"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.43.0",
-    "@typescript-eslint/parser": "^5.43.0",
-    "eslint": "^8.28.0",
-    "eslint-config-standard-with-typescript": "^23.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.50.0",
+    "@typescript-eslint/parser": "^5.50.0",
+    "eslint": "^8.33.0",
+    "eslint-config-standard-with-typescript": "^34.0.0",
     "eslint-plugin-eslint-comments": "^3.2.0",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-n": "^15.5.1",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^15.6.1",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^6.1.1",
-    "eslint-plugin-unicorn": "^45.0.0"
+    "eslint-plugin-unicorn": "^45.0.2"
   },
   "devDependencies": {
-    "@types/node": "^17.0.45",
-    "typescript": "^4.9.3"
+    "@types/node": "^18.11.18",
+    "typescript": "^4.9.5"
   }
 }

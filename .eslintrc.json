@@ -17,10 +17,8 @@
         "project": "./tsconfig.json"
     },
     "rules": {
+        "no-void": "off",
         "no-nested-ternary": "error",
-        "no-void": ["error", {
-            "allowAsStatement": true
-        }],
         "sort-imports": ["error", {
           "ignoreCase": true,
           "ignoreMemberSort": true,

@@ -1,13 +1,5 @@
 {
     "root": true,
-    "parser": "@typescript-eslint/parser",
-    "plugins": [
-        "@typescript-eslint",
-        "eslint-comments",
-        "promise",
-        "import",
-        "unicorn"
-    ],
     "extends": [
         "plugin:@typescript-eslint/recommended",
         "plugin:@typescript-eslint/recommended-requiring-type-checking",
@@ -15,7 +7,8 @@
         "plugin:import/typescript",
         "plugin:promise/recommended",
         "plugin:unicorn/recommended",
-        "standard-with-typescript"
+        "standard-with-typescript",
+        "plugin:prettier/recommended"
     ],
     "parserOptions": {
         "ecmaVersion": 2021,
@@ -23,44 +16,21 @@
         "project": "./tsconfig.json"
     },
     "rules": {
-        "semi": "off",
-        "indent": "off",
-        "comma-dangle": "off",
-        "multiline-ternary": "off",
-        "max-len": ["error", {
-            "code": 130,
-            "ignoreRegExpLiterals": true,
-            "ignoreTemplateLiterals": true,
-            "ignorePattern": "(^ +<(svg|path|line)|lazy\\(async)"
+        "no-nested-ternary": "error",
+        "no-void": ["error", {
+            "allowAsStatement": true
         }],
-        "arrow-parens": ["error", "always"],
-        "no-void": "off",
-        "sort-imports": [2, {
+        "sort-imports": ["error", {
           "ignoreCase": true,
           "ignoreMemberSort": true,
           "ignoreDeclarationSort": true,
           "memberSyntaxSortOrder": ["none", "all", "single", "multiple"]
         }],
 
-        "@typescript-eslint/ban-types": "off",
+        "@typescript-eslint/key-spacing": "off",
         "@typescript-eslint/no-explicit-any": "off",
-        "@typescript-eslint/promise-function-async": "off",
-        "@typescript-eslint/comma-dangle": ["error", "always-multiline"],
         "@typescript-eslint/no-non-null-assertion": "off",
         "@typescript-eslint/consistent-type-assertions": "off",
-        "@typescript-eslint/indent": [
-            "error",
-            4,
-            {
-                "SwitchCase": 1,
-                "ignoredNodes": [
-                    "TSUnionType",
-                    "TSTypeAnnotation",
-                    "TSTypeReference"
-                ]
-            }
-        ],
-        "@typescript-eslint/semi": ["error", "always"],
         "@typescript-eslint/strict-boolean-expressions": "off",
         "@typescript-eslint/explicit-function-return-type": "off",
         "@typescript-eslint/prefer-reduce-type-parameter": "off",
@@ -73,43 +43,36 @@
                 "attributes": false
             }
         }],
-        "@typescript-eslint/member-delimiter-style": ["error", {
-            "multiline": {
-                "delimiter": "semi",
-                "requireLast": true
-            },
-            "singleline": {
-                "delimiter": "semi",
-                "requireLast": false
-            }
-        }],
 
         "import/no-cycle": "error",
-        "import/prefer-default-export": "off",
         "import/no-default-export": "error",
-        "import/order": [2, {
-          "groups": [["builtin", "external"], ["index", "sibling", "parent"], "internal", "unknown"],
-          "newlines-between": "always",
-          "pathGroupsExcludedImportTypes": [],
-          "pathGroups": [
-            { "group": "internal", "pattern": "@/**" }
-          ]
+        "import/order": ["error", {
+            "groups": [["builtin", "external"], ["index", "sibling", "parent"], "internal", "unknown"],
+            "newlines-between": "always",
+            "pathGroupsExcludedImportTypes": [],
+            "pathGroups": [
+                { "group": "internal", "pattern": "@/**" }
+            ]
         }],
 
         "unicorn/no-null": "off",
         "unicorn/prefer-module": "off",
         "unicorn/no-array-reduce": "off",
-        "unicorn/no-nested-ternary": "off",
         "unicorn/prevent-abbreviations": "off",
-        "unicorn/no-useless-undefined": ["error", { "checkArguments": false }],
+        "unicorn/no-useless-undefined": ["error", {
+            "checkArguments": false
+        }],
 
         "promise/no-nesting": "off",
         "promise/always-return": "off",
-        "promise/catch-or-return": [
-            "error",
-            { "allowThen": false, "allowFinally": true, "terminationMethod": ["catch", "finally"] }
-        ],
+        "promise/catch-or-return": ["error", {
+            "allowThen": false,
+            "allowFinally": true,
+            "terminationMethod": ["catch", "finally"]
+        }],
 
-        "eslint-comments/disable-enable-pair": ["error", { "allowWholeFile": true }]
+        "eslint-comments/disable-enable-pair": ["error", {
+            "allowWholeFile": true
+        }]
     }
 }

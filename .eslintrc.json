@@ -3,10 +3,11 @@
     "extends": [
         "plugin:@typescript-eslint/recommended",
         "plugin:@typescript-eslint/recommended-requiring-type-checking",
-        "plugin:eslint-comments/recommended",
+        "plugin:n/recommended",
         "plugin:import/typescript",
         "plugin:promise/recommended",
         "plugin:unicorn/recommended",
+        "plugin:eslint-comments/recommended",
         "standard-with-typescript",
         "plugin:prettier/recommended"
     ],
@@ -55,20 +56,20 @@
             ]
         }],
 
-        "unicorn/no-null": "off",
-        "unicorn/prefer-module": "off",
-        "unicorn/no-array-reduce": "off",
-        "unicorn/prevent-abbreviations": "off",
-        "unicorn/no-useless-undefined": ["error", {
-            "checkArguments": false
-        }],
-
         "promise/no-nesting": "off",
         "promise/always-return": "off",
         "promise/catch-or-return": ["error", {
             "allowThen": false,
             "allowFinally": true,
             "terminationMethod": ["catch", "finally"]
+        }],
+
+        "unicorn/no-null": "off",
+        "unicorn/prefer-module": "off",
+        "unicorn/no-array-reduce": "off",
+        "unicorn/prevent-abbreviations": "off",
+        "unicorn/no-useless-undefined": ["error", {
+            "checkArguments": false
         }],
 
         "eslint-comments/disable-enable-pair": ["error", {

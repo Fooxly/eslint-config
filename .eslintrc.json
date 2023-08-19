@@ -69,6 +69,7 @@
         "unicorn/prevent-abbreviations": "off",
         "unicorn/prefer-top-level-await": "off",
         "unicorn/prefer-ternary": ["error", "only-single-line"],
+        "unicorn/no-array-callback-reference": "off",
         "unicorn/no-useless-undefined": ["error", {
             "checkArguments": false
         }],
